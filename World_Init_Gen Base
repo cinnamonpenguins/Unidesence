@@ -58,28 +58,30 @@ def init_cell(base, cmplxty, world_size, coords, biome, seed):
             if top % 2 == 1:
                 top += 1
             for z in range(-128, 128, 2):
-                if z in range(-126,-110,2) and ch_diamond(x, y, z, seed) > 7:
+              #---------------------------------I dont know python so please double check - krystal 
+                if z in range(-126,-110,2) and ch_diamond(x, y, z, seed) == 1:
                     block_list_z.append('014')
-                elif z in range(-126,int(top - 4), 2) and ch_dark_crystal(x,y,z,seed) > 7:
+                elif z in range(-126,int(top - 4), 2) and ch_dark_crystal(x,y,z,seed) == 1:
                     block_list_z.append('016')
-                elif z in range(-126,-100, 2) and ch_emerald(x,y,z,seed) > 5:
+                elif z in range(-126,-100, 2) and ch_emerald(x,y,z,seed) == 1:
                     block_list_z.append('015')
-                elif z in range(-126,-118, 2) and ch_ruby(x,y,z,seed) > 6:
+                elif z in range(-126,-118, 2) and ch_ruby(x,y,z,seed) == 1:
                     block_list_z.append('031')
-                elif z in range(-126,int(top - 4), 2) and ch_coal(x,y,z,seed) > 5:
+                elif z in range(-126,int(top - 4), 2) and ch_coal(x,y,z,seed) == 1:
                     block_list_z.append('006')
-                elif z in range(-126,-40, 2) and ch_gold(x,y,z,seed) > 5:
+                elif z in range(-126,-40, 2) and ch_gold(x,y,z,seed) == 1:
                     block_list_z.append('011')
-                elif z in range(-126,int(top-4), 2) and ch_thyrumite(x,y,z,seed) > 4:
+                elif z in range(-126,int(top-4), 2) and ch_thyrumite(x,y,z,seed) == 1:
                     block_list_z.append('012')
-                elif z in range(-126,int(top-4), 2) and ch_tin(x,y,z,seed) > 2:
+                elif z in range(-126,int(top-4), 2) and ch_tin(x,y,z,seed) == 1:
                     block_list_z.append('007')
-                elif z in range(-126,int(top-4), 2) and ch_aluminum(x,y,z,seed) > 4:
+                elif z in range(-126,int(top-4), 2) and ch_aluminum(x,y,z,seed) == 1:
                     block_list_z.append('012')
-                elif z in range(-126,int(top-4), 2) and ch_copper(x,y,z,seed) > 4:
+                elif z in range(-126,int(top-4), 2) and ch_copper(x,y,z,seed) == 1:
                     block_list_z.append('012')
-                elif z in range(-126,int(top-4), 2) and ch_iron(x,y,z,seed) > 4:
+                elif z in range(-126,int(top-4), 2) and ch_iron(x,y,z,seed) == 1:
                     block_list_z.append('012')
+                    # ----------------------------------------end of krystal's edit
                 elif z in range(-126,int(top-4), 2):
                     block_list_z.append('005')
                 elif z in range(int(top-2),int(top), 2):
